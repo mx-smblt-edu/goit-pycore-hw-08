@@ -8,6 +8,8 @@ from handlers.show_phone import show_phone
 from model.AddressBook import AddressBook
 from colorama import Fore, Style
 
+from persistent import load_data, save_data
+
 
 def parse_input(user_input: str) -> tuple[str, list[str]]:
     parts = user_input.split()
@@ -19,7 +21,7 @@ def parse_input(user_input: str) -> tuple[str, list[str]]:
 
 
 def main():
-    book: AddressBook = AddressBook()
+    book: AddressBook = load_data()
     print("Welcome to the assistant bot!")
     while True:
         user_input = input("Enter a command: ")
@@ -28,6 +30,7 @@ def main():
         if command == "":
             continue
         elif command in ["close", "exit"]:
+            save_data(book)
             print(f"{Fore.BLUE}Good bye!{Style.RESET_ALL}")
             break
         elif command == "hello":
