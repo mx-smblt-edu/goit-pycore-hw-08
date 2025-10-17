@@ -1,10 +1,13 @@
+"""
+Provides the Phone class.
+"""
 from error.InvalidPhoneNumberError import InvalidPhoneNumberError
 from model.Field import Field
 import re
 
 
 class Phone(Field):
-    """Клас для зберігання номера телефону. Має валідацію формату (10 цифр)"""
+    """Class for storing phone numbers. Has format validation (10 digits)"""
 
     __pattern__: re.Pattern = re.compile(r"^\d{10}$")
 

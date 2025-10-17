@@ -1,7 +1,10 @@
+"""
+Provides the Name class.
+"""
 from model.Field import Field
 
 
 class Name(Field):
-    """Клас для зберігання імені контакту."""
+    """Class for storing the contact name."""
 
     pass

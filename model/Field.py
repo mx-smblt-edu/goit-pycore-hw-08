@@ -1,5 +1,10 @@
+"""
+Provides the Field class.
+"""
+
+
 class Field:
-    """Базовий клас для полів запису."""
+    """Base class for record fields."""
 
     def __init__(self, value):
         self.value = value

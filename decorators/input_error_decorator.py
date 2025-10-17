@@ -1,3 +1,10 @@
+"""
+A decorator module for handling specific exceptions.
+
+This module provides a decorator, `input_error`, to simplify error handling in
+functions. It catches specific exceptions and returns their associated error messages
+to the caller.
+"""
 from functools import wraps
 
 from error.ContactNotFoundError import ContactNotFoundError
@@ -7,6 +14,19 @@ from error.InvalidPhoneNumberError import InvalidPhoneNumberError
 
 
 def input_error(func):
+    """
+    Wraps a function to handle specific errors and return their associated error messages.
+
+    This decorator is intended to simplify error handling within decorated functions by
+    catching specific exceptions and returning their predefined messages to the caller.
+
+    :param func: The function to be wrapped by the decorator.
+    :type func: Callable
+    :return: The wrapped function capable of handling specific exceptions and returning
+             their associated messages.
+    :rtype: Callable
+    """
+
     @wraps(func)
     def inner(*args, **kwargs):
         try:
