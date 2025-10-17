@@ -2,7 +2,7 @@
 Provides a function to retrieve and format upcoming birthdays from an AddressBook.
 """
 from decorators.input_error_decorator import input_error
-from model.AddressBook import AddressBook
+from model.address_book import AddressBook
 
 
 @input_error

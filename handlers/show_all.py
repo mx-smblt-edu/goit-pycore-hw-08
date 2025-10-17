@@ -1,7 +1,7 @@
 """
 Provides a function to display all contacts in an AddressBook.
 """
-from model.AddressBook import AddressBook
+from model.address_book import AddressBook
 
 
 def show_all(book: AddressBook) -> str:

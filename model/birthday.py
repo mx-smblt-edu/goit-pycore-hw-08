@@ -2,8 +2,9 @@
 Provides the Birthday class.
 """
 from datetime import datetime
-from error.InvalidBirthdayError import InvalidBirthdayError
-from model.Field import Field
+
+from error.invalid_birthday_error import InvalidBirthdayError
+from model.field import Field
 
 
 class Birthday(Field):

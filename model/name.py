@@ -1,7 +1,7 @@
 """
 Provides the Name class.
 """
-from model.Field import Field
+from model.field import Field
 
 
 class Name(Field):

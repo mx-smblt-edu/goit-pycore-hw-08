@@ -2,9 +2,9 @@
 Provides a function to add or update a birthday for a contact in an AddressBook.
 """
 from decorators.input_error_decorator import input_error
-from error.InvalidCommandArgsError import InvalidCommandArgsError
-from model.AddressBook import AddressBook
-from model.Record import Record
+from error.invalid_command_args_error import InvalidCommandArgsError
+from model.address_book import AddressBook
+from model.record import Record
 
 
 @input_error

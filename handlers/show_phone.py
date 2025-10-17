@@ -2,9 +2,9 @@
 Provides a function to display a contact's phone number.
 """
 from decorators.input_error_decorator import input_error
-from error.ContactNotFoundError import ContactNotFoundError
-from error.InvalidCommandArgsError import InvalidCommandArgsError
-from model.AddressBook import AddressBook
+from error.contact_not_found_error import ContactNotFoundError
+from error.invalid_command_args_error import InvalidCommandArgsError
+from model.address_book import AddressBook
 
 
 @input_error

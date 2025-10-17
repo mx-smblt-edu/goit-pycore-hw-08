@@ -1,9 +1,10 @@
 """
 Provides the Phone class.
 """
-from error.InvalidPhoneNumberError import InvalidPhoneNumberError
-from model.Field import Field
 import re
+
+from error.invalid_phone_number_error import InvalidPhoneNumberError
+from model.field import Field
 
 
 class Phone(Field):

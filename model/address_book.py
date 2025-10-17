@@ -3,8 +3,9 @@ Provides an AddressBook class for managing and storing contact information.
 """
 from collections import UserDict
 from datetime import timedelta, datetime, date
-from model.Birthday import Birthday
-from model.Record import Record
+
+from model.birthday import Birthday
+from model.record import Record
 
 
 class AddressBook(UserDict[str, Record]):

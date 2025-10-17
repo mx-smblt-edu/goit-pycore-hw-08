@@ -7,10 +7,10 @@ to the caller.
 """
 from functools import wraps
 
-from error.ContactNotFoundError import ContactNotFoundError
-from error.InvalidBirthdayError import InvalidBirthdayError
-from error.InvalidCommandArgsError import InvalidCommandArgsError
-from error.InvalidPhoneNumberError import InvalidPhoneNumberError
+from error.contact_not_found_error import ContactNotFoundError
+from error.invalid_birthday_error import InvalidBirthdayError
+from error.invalid_command_args_error import InvalidCommandArgsError
+from error.invalid_phone_number_error import InvalidPhoneNumberError
 
 
 def input_error(func):

@@ -1,9 +1,9 @@
 """
 Provides the Record class.
 """
-from model.Birthday import Birthday
-from model.Name import Name
-from model.Phone import Phone
+from model.birthday import Birthday
+from model.name import Name
+from model.phone import Phone
 
 
 class Record:

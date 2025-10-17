@@ -3,7 +3,7 @@ Provides functions to save and load AddressBook objects.
 """
 import pickle
 
-from model.AddressBook import AddressBook
+from model.address_book import AddressBook
 
 __DEFAULT_FILE_NAME = "address-book.db"
 
