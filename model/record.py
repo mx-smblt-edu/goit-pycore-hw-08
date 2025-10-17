@@ -24,13 +24,13 @@ class Record:
         """
         index_phone_number = self.__index_phone_number(phone_number)
         if index_phone_number is None:
-            # Номер телефону відсутній у списку
+            # The phone number does not exist in the list
             phone = Phone(phone_number)
             self.phones.append(phone)
             return phone
-        else:
-            # Номер телефону вже мається у списку
-            return None
+
+        # The phone number is already in the list
+        return None
 
     def edit_phone(self, old_phone_number: str, new_phone_number: str) -> Phone:
         """
@@ -47,11 +47,11 @@ class Record:
         """
         index_old_phone_number = self.__index_phone_number(old_phone_number)
         if index_old_phone_number is None:
-            # Старий номер телефону відсутній у списку
+            # The old phone number is not in the list
             raise ValueError(f"Phone '{old_phone_number}' is not found.")
 
         if self.__index_phone_number(new_phone_number) is not None:
-            # Новий номер телефону вже є у списку
+            # The new phone number is already in the list
             raise ValueError(f"Phone '{new_phone_number}' is already used.")
 
         new_phone = Phone(new_phone_number)
@@ -71,7 +71,7 @@ class Record:
         """
         index_phone_number = self.__index_phone_number(phone_number)
         if index_phone_number is not None:
-            # Номер телефону є у списку
+            # The phone number is already in the list
             return self.phones.pop(index_phone_number)
         else:
             # Номер телефону відсутній у списку
@@ -91,11 +91,11 @@ class Record:
         """
         index_phone_number = self.__index_phone_number(phone_number)
         if index_phone_number is not None:
-            # Номер телефону є у списку
+            # The old phone number is not in the list
             return self.phones[index_phone_number]
-        else:
-            # Номер телефону відсутній у списку
-            return None
+
+        # Номер телефону відсутній у списку
+        return None
 
     def add_birthday(self, birthday: str) -> Birthday:
         """

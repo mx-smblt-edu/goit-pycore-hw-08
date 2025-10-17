@@ -35,5 +35,5 @@ def show_phone(args: list[str], book: AddressBook) -> str:
 
     if record.phones:
         return f"Phones: {"; ".join([f"{phone}" for phone in record.phones])}"
-    else:
-        return "No phones found."
+
+    return "No phones found."

@@ -34,6 +34,6 @@ def add_birthday(args: list[str], book: AddressBook) -> str:
         record.add_birthday(birthday)
         book.add_record(record)
         return "Birthday added to contact."
-    else:
-        record.add_birthday(birthday)
-        return "Birthday updated in contact."
+
+    record.add_birthday(birthday)
+    return "Birthday updated in contact."

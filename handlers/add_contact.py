@@ -35,6 +35,6 @@ def add_contact(args: list[str], book: AddressBook) -> str:
         record.add_phone(phone)
         book.add_record(record)
         return "Contact added."
-    else:
-        record.add_phone(phone)
-        return "Contact updated."
+
+    record.add_phone(phone)
+    return "Contact updated."

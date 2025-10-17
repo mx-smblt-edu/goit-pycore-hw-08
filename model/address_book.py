@@ -106,8 +106,8 @@ class AddressBook(UserDict[str, Record]):
             else:
                 congratulation_date = estimated_birthday
             return congratulation_date
-        else:
-            return None
+
+        return None
 
     def __str__(self) -> str:
         return "AddressBook\n" + '\n'.join([f'{record}' for record in self.data.values()])

@@ -34,5 +34,5 @@ def show_birthday(args: list[str], book: AddressBook) -> str:
 
     if record.birthday:
         return str(record.birthday)
-    else:
-        return "No birthday found."
+
+    return "No birthday found."
