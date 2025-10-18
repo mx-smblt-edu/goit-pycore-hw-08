@@ -126,7 +126,7 @@ class Record:
     def __str__(self):
         result = f"Contact name: {self.name}"
         if self.birthday:
-            result = result + f", birthday: {self.birthday.value.strftime(Birthday.format)}"
+            result = result + f", birthday: {self.birthday.to_stringr()}"
         if self.phones:
             result = result + f", phones: {'; '.join([f'{phone}' for phone in self.phones])}"
         return result

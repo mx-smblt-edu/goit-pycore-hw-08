@@ -18,6 +18,9 @@ class Birthday(Field):
     """
     format = "%d.%m.%Y"
 
+    def to_stringr(self) -> str:
+        return self.value.strftime(Birthday.format)
+
     def __init__(self, value: str):
         try:
             date = datetime.strptime(value, Birthday.format).date()
@@ -26,4 +29,4 @@ class Birthday(Field):
             raise InvalidBirthdayError(value)
 
     def __str__(self) -> str:
-        return f"Birthday: {self.value.strftime(Birthday.format)}"
+        return f"Birthday: {self.to_stringr()}"

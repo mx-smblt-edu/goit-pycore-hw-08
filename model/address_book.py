@@ -73,7 +73,7 @@ class AddressBook(UserDict[str, Record]):
             if birthday is None:
                 continue
 
-            congratulation_date = AddressBook.__get_congratulation_date(birthday, start_date, end_date)
+            congratulation_date: date = AddressBook.__get_congratulation_date(birthday, start_date, end_date)
             if congratulation_date:
                 result.append((record.name.value, congratulation_date.strftime(Birthday.format)))
 
